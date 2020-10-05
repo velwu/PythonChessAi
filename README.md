@@ -1,5 +1,58 @@
- # Dependencies
+# Introduction
+
+This is a modification of Anthony A Sanchez's PythonChessAi. The modification visualizes the chess pieces that were originally characters into chess icons. This way, common players can more easily understand the board states.
+
+Movements in this chess game are input in the form of 4-digit strings, where the first 2 digits indicate the current cell, and the latter 2 digits the target cell. Alphabets a to h represent the columns from left right, and 1 to 8 represent the row from bottom to top.
+
+The game can be run at the development console in PyCharm. The human player plays as Black (bottom), and the computer plays as White (top).
+
+
+### Example game states before and after moves:
+```
+ ♖   ♘   ♗   ♕   ♔   ♗   ♘   ♖ 
+ 
+ ♙   ♙   ♙   ♙   ♙   ♙   ♙   ♙ 
+ 
+ 口   口   口   口   口   口   口   口 
+ 
+ 口   口   口   口   口   口   口   口 
+ 
+ 口   口   口   口   口   口   口   口 
+ 
+ 口   口   口   口   口   口   口   口 
+ 
+ ♟   ♟   ♟   ♟   ♟   ♟   ♟   ♟ 
+ 
+ ♜   ♞   ♝   ♛   ♚   ♝   ♞   ♜ 
+ 
+ - After making moves "d2d3 (by human)" and "g8h6" (by computer):
+	
+ ♖   ♘   ♗   ♕   ♔   ♗   口   ♖ 
+ 
+ ♙   ♙   ♙   ♙   ♙   ♙   ♙   ♙ 
+ 
+ 口   口   口   口   口   口   口   ♘ 
+ 
+ 口   口   口   口   口   口   口   口 
+ 
+ 口   口   口   口   口   口   口   口 
+ 
+ 口   口   口   ♟   口   口   口   口 
+ 
+ ♟   ♟   ♟   口   ♟   ♟   ♟   ♟ 
+ 
+ ♜   ♞   ♝   ♛   ♚   ♝   ♞   ♜ 
+```
+- Movement d2d3 moves the black Pawn from cell d2 to cell d3
+- Movement g8h6 move the white Knight (no pun intended) from cell g8 to cell h6
+
+
+======== Note by Vel (Tien-Yun) Wu: this is the end of my writing in the Readme. The section below is composed by Anthony A Sanchez========
+
+
+# Dependencies
 Python-Chess
+
 # Minimax
 The minimax algorithm can be visualized as a tree, at the bottom of this tree we have an evaluation function determining the value of each outcome. We can specify the depth that the tree will travel to, in this example we travel to a depth of 4.
 At the bottom of this tree each node has a value that we will use to evaluate which branch to take. 
