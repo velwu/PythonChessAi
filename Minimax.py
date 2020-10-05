@@ -1,8 +1,9 @@
 import chess
-import sunfish
+#import sunfish
 import math
 import random
 import sys
+import print_board_vels as pbv
 
 
 
@@ -31,6 +32,7 @@ def minimax(depth, board, is_maximizing):
     if(depth == 0):
         return -evaluation(board)
     possibleMoves = board.legal_moves
+    print(possibleMoves)
     if(is_maximizing):
         bestMove = -9999
         for x in possibleMoves:
@@ -81,7 +83,6 @@ def evaluation(board):
         evaluation = evaluation + (getPieceValue(str(board.piece_at(i))) if x else -getPieceValue(str(board.piece_at(i))))
     return evaluation
 
-
 def getPieceValue(piece):
     if(piece == None):
         return 0
@@ -104,7 +105,9 @@ def getPieceValue(piece):
 def main():
     board = chess.Board()
     n = 0
-    print(board)
+    print(board.legal_moves)
+    #print(board)
+    pbv.print_board(board)
     while n < 100:
         if n%2 == 0:
             move = input("Enter move: ")
@@ -112,10 +115,12 @@ def main():
             board.push(move)
         else:
             print("Computers Turn:")
-            move = minimaxRoot(4,board,True)
+            #move = minimaxRoot(4,board,True)
+            move = minimaxRoot(1,board,False)
             move = chess.Move.from_uci(str(move))
             board.push(move)
-        print(board)
+        #print(board)
+        pbv.print_board(board)
         n += 1
 
 
