@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb30cdd9-922e-4fe7-8322-1f893f81e3f5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/print_board_vels.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ChessEngine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ChessEngine.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="fb30cdd9-922e-4fe7-8322-1f893f81e3f5" name="Default" comment="Chess board visualized and functional">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AlphaBetaPruning.py" beforeDir="false" afterPath="$PROJECT_DIR$/AlphaBetaPruning.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Minimax.py" beforeDir="false" afterPath="$PROJECT_DIR$/Minimax.py" afterDir="false" />
@@ -40,9 +36,31 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
   </component>
-  <component name="RunManager" selected="Python.Minimax">
+  <component name="RunManager" selected="Python.AlphaBetaPruning">
+    <configuration name="AlphaBetaPruning" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ChessEngine" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AlphaBetaPruning.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Minimax" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ChessEngine" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -113,9 +131,11 @@
       <item itemvalue="Python.Tester" />
       <item itemvalue="Python.Minimax" />
       <item itemvalue="Python.print_board_vels" />
+      <item itemvalue="Python.AlphaBetaPruning" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.AlphaBetaPruning" />
         <item itemvalue="Python.Minimax" />
         <item itemvalue="Python.print_board_vels" />
         <item itemvalue="Python.Tester" />
@@ -132,53 +152,88 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1501221737372</updated>
-      <workItem from="1601911731240" duration="6212000" />
+      <workItem from="1601911731240" duration="9176000" />
+      <workItem from="1601933326461" duration="19212000" />
+      <workItem from="1602044922048" duration="621000" />
+      <workItem from="1602088213479" duration="122000" />
+      <workItem from="1602212159155" duration="1403000" />
+      <workItem from="1602632690709" duration="1649000" />
+      <workItem from="1602695194482" duration="84000" />
+      <workItem from="1602720788543" duration="1119000" />
+      <workItem from="1602731579325" duration="2912000" />
+      <workItem from="1602736291238" duration="1313000" />
+      <workItem from="1602782717670" duration="11415000" />
     </task>
+    <task id="LOCAL-00001" summary="Chess board visualized and functional">
+      <created>1601918227332</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601918227332</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Chess board visualized and functional" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chess board visualized and functional" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1557" height="386" key="GridCell.Tab.0.bottom" timestamp="1601918005763">
+    <state x="330" y="13" key="CommitChangelistDialog2" timestamp="1601918226231">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="386" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1601918005763" />
-    <state width="1557" height="386" key="GridCell.Tab.0.center" timestamp="1601918005762">
+    <state x="330" y="13" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1601918226231" />
+    <state width="1557" height="143" key="GridCell.Tab.0.bottom" timestamp="1602801630872">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="386" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1601918005762" />
-    <state width="1557" height="386" key="GridCell.Tab.0.left" timestamp="1601918005762">
+    <state width="1557" height="143" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1602801630872" />
+    <state width="1557" height="143" key="GridCell.Tab.0.center" timestamp="1602801630872">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="386" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1601918005762" />
-    <state width="1557" height="386" key="GridCell.Tab.0.right" timestamp="1601918005763">
+    <state width="1557" height="143" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1602801630872" />
+    <state width="1557" height="143" key="GridCell.Tab.0.left" timestamp="1602801630872">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="386" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1601918005763" />
-    <state width="1557" height="143" key="GridCell.Tab.1.bottom" timestamp="1601916288759">
+    <state width="1557" height="143" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1602801630872" />
+    <state width="1557" height="143" key="GridCell.Tab.0.right" timestamp="1602801630872">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="143" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1601916288759" />
-    <state width="1557" height="143" key="GridCell.Tab.1.center" timestamp="1601916288759">
+    <state width="1557" height="143" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1602801630872" />
+    <state width="1557" height="143" key="GridCell.Tab.1.bottom" timestamp="1602801630527">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="143" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1601916288759" />
-    <state width="1557" height="143" key="GridCell.Tab.1.left" timestamp="1601916288759">
+    <state width="1557" height="143" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1602801630527" />
+    <state width="1557" height="143" key="GridCell.Tab.1.center" timestamp="1602801630527">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="143" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1601916288759" />
-    <state width="1557" height="143" key="GridCell.Tab.1.right" timestamp="1601916288759">
+    <state width="1557" height="143" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1602801630527" />
+    <state width="1557" height="143" key="GridCell.Tab.1.left" timestamp="1602801630527">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="143" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1601916288759" />
-    <state x="301" y="73" key="SettingsEditor" timestamp="1601912636072">
+    <state width="1557" height="143" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1602801630527" />
+    <state width="1557" height="143" key="GridCell.Tab.1.right" timestamp="1602801630527">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="301" y="73" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1601912636072" />
+    <state width="1557" height="143" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1602801630527" />
+    <state x="301" y="73" key="SettingsEditor" timestamp="1601949049607">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="301" y="73" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1601949049607" />
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2" timestamp="1601918242468">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1601918242468" />
+    <state x="496" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1602782737772">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="496" y="255" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1602782737772" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/A6$AlphaBetaPruning.coverage" NAME="AlphaBetaPruning Coverage Results" MODIFIED="1602800525559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/A6$print_board_test.coverage" NAME="print_board_vels Coverage Results" MODIFIED="1601915848308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/A6$Minimax.coverage" NAME="Minimax Coverage Results" MODIFIED="1601918005744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/A6$Minimax.coverage" NAME="Minimax Coverage Results" MODIFIED="1602801629510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
