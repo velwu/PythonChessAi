@@ -3,6 +3,7 @@ import chess
 import math
 import random
 import sys
+import print_board_vels as pbv
 
 
 
@@ -10,11 +11,17 @@ def minimaxRoot(depth, board,isMaximizing):
     possibleMoves = board.legal_moves
     bestMove = -9999
     bestMoveFinal = None
+
+    print("Depth: ", (4 - depth + 1), " ", len(list(possibleMoves)), " Possible Moves")
+
     for x in possibleMoves:
         move = chess.Move.from_uci(str(x))
         board.push(move)
-        value = max(bestMove, minimax(depth - 1, board,-10000,10000, not isMaximizing))
+        #value = max(bestMove, minimax(depth - 1, board,-10000,10000, not isMaximizing))
+        current_val = minimax(depth - 1, board, -10000, 10000, not isMaximizing)
+        value = max(bestMove, current_val)
         board.pop()
+        print("Move:", x, " Value:", current_val)
         if( value > bestMove):
             print("Best score: " ,str(bestMove))
             print("Best move: ",str(bestMoveFinal))
@@ -26,6 +33,9 @@ def minimax(depth, board, alpha, beta, is_maximizing):
     if(depth == 0):
         return -evaluation(board)
     possibleMoves = board.legal_moves
+
+    print("Depth: ", (4 - depth + 1), " ", len(list(possibleMoves)), " Possible Moves")
+
     if(is_maximizing):
         bestMove = -9999
         for x in possibleMoves:
@@ -90,22 +100,26 @@ def getPieceValue(piece):
     if piece == "P" or piece == "p":
         value = 10
     if piece == "N" or piece == "n":
-        value = 30
+        # value = 30
+        value = 70
     if piece == "B" or piece == "b":
         value = 30
     if piece == "R" or piece == "r":
         value = 50
     if piece == "Q" or piece == "q":
-        value = 90
+        # value = 90
+        value = 1500
     if piece == 'K' or piece == 'k':
-        value = 900
+        # value = 900
+        value = 2000
     #value = value if (board.piece_at(place)).color else -value
     return value
 
 def main():
     board = chess.Board()
     n = 0
-    print(board)
+    # print(board)
+    pbv.print_board(board)
     while n < 100:
         if n%2 == 0:
             move = input("Enter move: ")
@@ -113,10 +127,11 @@ def main():
             board.push(move)
         else:
             print("Computers Turn:")
-            move = minimaxRoot(3,board,True)
+            move = minimaxRoot(5,board,True)
             move = chess.Move.from_uci(str(move))
             board.push(move)
-        print(board)
+        # print(board)
+        pbv.print_board(board)
         n += 1
 
 

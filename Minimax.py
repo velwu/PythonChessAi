@@ -5,7 +5,8 @@ import random
 import sys
 import print_board_vels as pbv
 
-
+# Package required: https://pypi.org/project/python-chess/
+# pip install python-chess
 
 def minimaxRoot(depth, board,isMaximizing):
     possibleMoves = board.legal_moves
@@ -13,10 +14,16 @@ def minimaxRoot(depth, board,isMaximizing):
     secondBest = -9999
     thirdBest = -9999
     bestMoveFinal = None
+
+    print("Depth: ", (4 - depth + 1), " ", len(list(possibleMoves)), " Possible Moves")
+
     for x in possibleMoves:
         move = chess.Move.from_uci(str(x))
         board.push(move)
-        value = max(bestMove, minimax(depth - 1, board, not isMaximizing))
+        # value = max(bestMove, minimax(depth - 1, board, not isMaximizing))
+        current_val = max(bestMove, minimax(depth - 1, board, not isMaximizing))
+        value = max(bestMove, current_val)
+        print("Move:", x, " Value:", current_val)
         board.pop()
         if( value > bestMove):
             print("Best score: " ,str(bestMove))
@@ -31,14 +38,23 @@ def minimaxRoot(depth, board,isMaximizing):
 def minimax(depth, board, is_maximizing):
     if(depth == 0):
         return -evaluation(board)
+
     possibleMoves = board.legal_moves
-    print(possibleMoves)
+
+    print("Depth: ", (4 - depth + 1), " ", len(list(possibleMoves)), " Possible Moves")
+
+    # TODO: Restore the print statement when not playing
+    # print(possibleMoves)
     if(is_maximizing):
         bestMove = -9999
         for x in possibleMoves:
             move = chess.Move.from_uci(str(x))
             board.push(move)
-            bestMove = max(bestMove,minimax(depth - 1, board, not is_maximizing))
+            # bestMove = max(bestMove,minimax(depth - 1, board, not is_maximizing))
+            mm_thing = minimax(depth - 1, board, not is_maximizing)
+
+            bestMove = max(bestMove, mm_thing)
+            # print("X:", x, "best move:", bestMove)
             board.pop()
         return bestMove
     else:
@@ -47,6 +63,7 @@ def minimax(depth, board, is_maximizing):
             move = chess.Move.from_uci(str(x))
             board.push(move)
             bestMove = min(bestMove, minimax(depth - 1, board, not is_maximizing))
+            # print("X:", x, "best move:", bestMove)
             board.pop()
         return bestMove
 
@@ -90,23 +107,24 @@ def getPieceValue(piece):
     if piece == "P" or piece == "p":
         value = 10
     if piece == "N" or piece == "n":
-        value = 30
+        # value = 30
+        value = 70
     if piece == "B" or piece == "b":
         value = 30
     if piece == "R" or piece == "r":
         value = 50
     if piece == "Q" or piece == "q":
-        value = 90
+        # value = 90
+        value = 1500
     if piece == 'K' or piece == 'k':
-        value = 900
+        # value = 900
+        value = 2000
     #value = value if (board.piece_at(place)).color else -value
     return value
 
 def main():
     board = chess.Board()
     n = 0
-    print(board.legal_moves)
-    #print(board)
     pbv.print_board(board)
     while n < 100:
         if n%2 == 0:
@@ -115,11 +133,11 @@ def main():
             board.push(move)
         else:
             print("Computers Turn:")
-            #move = minimaxRoot(4,board,True)
-            move = minimaxRoot(1,board,False)
+            # move = minimaxRoot(4,board,True)
+            # move = minimaxRoot(1,board,False)
+            move = minimaxRoot(4, board, True)
             move = chess.Move.from_uci(str(move))
             board.push(move)
-        #print(board)
         pbv.print_board(board)
         n += 1
 
