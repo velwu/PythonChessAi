@@ -4,7 +4,7 @@ import math
 import random
 import pandas as pd
 import sys
-import Minimax as mnm
+import chess.svg
 
 def print_board(board_class, is_list_bool):
     uni_pieces = {'r':' ♜ ', 'n':' ♞ ', 'b':' ♝ ', 'q':' ♛ ', 'k':' ♚ ', 'p':' ♟ ',

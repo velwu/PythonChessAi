@@ -2,21 +2,47 @@ import argparse
 import json
 import chess
 import print_board
+import numpy as np
+
+map_letter_reps_to_piece_names = {
+    'R': 'Black Rook', 'N': 'Black Knight', 'B': 'Black Bishop',
+    'Q': 'Black Queen', 'K': 'Black King', 'P': 'BLack Pawn',
+    'r': 'White Rook', 'n': 'White Knight', 'b': 'White Bishop',
+    'q': 'White Queen', 'k': 'White King', 'p': 'White Pawn',
+    '.': 'nothing'
+}
+
+def on_chess_board(chess_board, pos_tuple):
+    if pos_tuple[0] < 0 or pos_tuple[1] < 0:
+        return False
+    try:
+        chess_board[pos_tuple[0]][pos_tuple[1]]
+    except (ValueError, IndexError):
+        return False
+    else:
+        return True
+
+def add_piece_forcibly(chess_board, piece_to_add, position_tuple):
+    chess_board[position_tuple[0]][position_tuple[1]] = piece_to_add
+    print("Adding a", map_letter_reps_to_piece_names[piece_to_add], "at", position_tuple)
+
+    return chess_board
+
+def move_piece_by_set_pos(current_position_tuple, movement_tuple, chess_board, piece_to_move):
+    # current_position_tuple = (old_row, old_col)
+    # movement_tuple = (move_row, move_col)
+    chess_board[current_position_tuple[0]][current_position_tuple[1]] = "."
+    chess_board[movement_tuple[0]][movement_tuple[1]] = piece_to_move
+
+    return chess_board
 
 def get_piece_at_position(pos, chess_board):
     # print("Position queried:", pos)
     the_one_piece = chess_board[pos[0]][pos[1]]
-    map_letter_reps_to_piece_names = {
-        'R': 'Black Rook', 'N': 'Black Knight', 'B': 'Black Bishop',
-        'Q': 'Black Queen', 'K': 'Black King', 'P': 'BLack Pawn',
-        'r': 'White Rook', 'n': 'White Knight', 'b': 'White Bishop',
-        'q': 'White Queen', 'k': 'White King', 'p': 'White Pawn',
-        '.': 'nothing'
-    }
 
-
+    piece_name = map_letter_reps_to_piece_names[the_one_piece]
     # print("The piece at", pos, "is a", map_letter_reps_to_piece_names[the_one_piece])
-    return the_one_piece
+    return the_one_piece, piece_name
 
 def create_chess_board(variant_name):
 
@@ -42,48 +68,51 @@ def create_chess_board(variant_name):
 
     # print("Board type:", variant_name, "\n", *chess_board, sep="\n")
     print("Board type:", variant_name)
+
     return chess_board
 
 #TODO: Implement Crusader moves first
 #TODO: Ask during OH how Archer moves can be implemented
 
 
-def get_rook_moves(pos, chess_board):
+def get_rook_moves(current_pos, chess_board):
     """ A function that returns the all possible moves of a Rook at a given position
-        pos: The current position of the Rook
+        current_pos: The current position of the Rook, represented by a tuple
         chess_board: The current game board state represented by a 2D array/list
     """
     solution_moves = []
-    # Look for potential moves in the same row
-    for j in range(len(chess_board)):
-        if j != pos[1]:
-            solution_moves.append((pos[0], j))
+    this_rook = get_piece_at_position(current_pos, chess_board)
+    # Look for potential moves in all 4 directions
+    rook_directions = [[1, 0], [-1, 0], [0, 1], [0, -1]]
 
-    # Look for potential moves in the same column
-    for i in range(len(chess_board)):
-        if i != pos[0]:
-           solution_moves.append((i, pos[1]))
+    for each_direction in rook_directions:
+        rook_current = list(current_pos)
+        while True:
+            rook_current = np.add(rook_current, each_direction)
+            new_pos = tuple(rook_current)
+            if not on_chess_board(chess_board, new_pos):
+                # print("Going out of board")
+                break
 
-    solution_moves.sort()
-    print("Rook moves without collisions from", pos, ":", solution_moves)
+            elif on_chess_board(chess_board, new_pos):
+                piece_at_new_pos = get_piece_at_position(new_pos, chess_board)
+                if piece_at_new_pos[0] == ".":
+                    solution_moves.append(new_pos)
 
+                elif piece_at_new_pos[0].isupper() != this_rook[0].isupper():
+                    # If it's an enemy piece
+                    print("Detecting an enemy", piece_at_new_pos[1], "at", new_pos)
+                    solution_moves.append(new_pos)
+                    break
 
-    for each_move_choice in solution_moves:
-        # Condition: If the target position is not empty
-        if get_piece_at_position(each_move_choice, chess_board) != ".":
-            # Condition: If it is occupied by an friendly piece
-            if get_piece_at_position(each_move_choice, chess_board).isupper() == get_piece_at_position(pos, chess_board).isupper():
-                solution_moves = [x for x in solution_moves if x != each_move_choice]
-                print(solution_moves)
-            # TODO: Finish this section
-            # Condition: If it is occupied by an enemy piece
+                elif piece_at_new_pos[0].isupper() == this_rook[0].isupper():
+                    #If it's an ally piece:
+                    print("Detecing an ally", piece_at_new_pos[1], "at", new_pos)
+                    break
+            else:
+                break
+    print("All possible moves with this Rook:", solution_moves)
     return solution_moves
-        
-
-    
-
-
-
 
 """
 def getKnightMoves(pos, chess_board):

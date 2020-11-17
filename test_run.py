@@ -3,31 +3,36 @@ import json
 
 import mechanics
 import print_board
-
+import chess.svg
+# Test 1. Get a Gardner board
 # chess_board = mechanics.create_chess_board("Gardner")
-chess_board = mechanics.create_chess_board("Jacobs–Meirovitz")
+# Test 2. Get a Jacobs–Meirovitz board
+# chess_board = mechanics.create_chess_board("Jacobs–Meirovitz")
+# Test 3. Get a Mallett board
+# chess_board = mechanics.create_chess_board("Mallett")
+
+# Test 4. Place some derelict pieces to test piece movement mechanics
+location = (2,2)
+chess_board = [[".", ".", ".", ".", "."] for i in range(5)]
+mechanics.add_piece_forcibly(chess_board, 'r', location)
+
+other_location = (2,0)
+mechanics.add_piece_forcibly(chess_board, 'Q', other_location)
+yet_other_location = (2,1)
+mechanics.add_piece_forcibly(chess_board, "P", yet_other_location)
+another_location = (3,2)
+mechanics.add_piece_forcibly(chess_board, "n", another_location)
+
 print_board.print_board(chess_board, True)
 
-"""
-parser = argparse.ArgumentParser()
-parser.add_argument("-p", "--piece", help="chess piece name: ex- rook, knight, pawn etc")
-parser.add_argument("-l", "--location", help="chess notation string: ex- E4, D6 etc")
-args = parser.parse_args()
-
-"""
-
-
-piece = "rook"
-location = (0,2)
 # According to the type of piece adjust function
-if (piece == "rook"):
+piece = mechanics.get_piece_at_position(location,chess_board)
+if (piece[0] in ['R', 'r']):
+    possible_moves = mechanics.get_rook_moves(location, chess_board)
     print(json.dumps({"piece":piece,
                       "current_location": location,
-                      "moves": mechanics.get_rook_moves(location, chess_board)}))
+                      str(len(possible_moves)) + " possible moves": len(possible_moves)}))
 
-
-thing = mechanics.get_piece_at_position((4,3), chess_board)
-print(thing)
 """
 elif (piece == "knight"):
     print(json.dumps({"piece":piece,
