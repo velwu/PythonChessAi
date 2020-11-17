@@ -71,10 +71,6 @@ def create_chess_board(variant_name):
 
     return chess_board
 
-#TODO: Implement Crusader moves first
-#TODO: Ask during OH how Archer moves can be implemented
-
-
 def get_rook_moves(current_pos, chess_board):
     """ A function that returns the all possible moves of a Rook at a given position
         current_pos: The current position of the Rook, represented by a tuple
@@ -114,6 +110,14 @@ def get_rook_moves(current_pos, chess_board):
     print("All possible moves with this Rook:", solution_moves)
     return solution_moves
 
+#TODO: Get Knight moves
+#TODO: Get Bishop moves
+#TODO: Get Queen moves
+#TODO: Get Pawn moves
+#TODO: Get King moves
+#TODO: Play the whole game (no AI, but generate exhastive game tree)
+#TODO: Write the analysis
+#TODO: Start small. Try some 3*3 boards which are mostly solved (with any piece combinations, perhaps??)
 """
 def getKnightMoves(pos, chess_board):
 

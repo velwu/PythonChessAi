@@ -19,12 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb30cdd9-922e-4fe7-8322-1f893f81e3f5" name="Default" comment="Rook moves primitive prototypes">
-      <change afterPath="$PROJECT_DIR$/fun_tests.py" afterDir="false" />
+    <list default="true" id="fb30cdd9-922e-4fe7-8322-1f893f81e3f5" name="Default" comment="Rook moves finished">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mechanics.py" beforeDir="false" afterPath="$PROJECT_DIR$/mechanics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/print_board.py" beforeDir="false" afterPath="$PROJECT_DIR$/print_board.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_run.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +224,7 @@
       <workItem from="1605328442159" duration="720000" />
       <workItem from="1605544316404" duration="7124000" />
       <workItem from="1605555153727" duration="13484000" />
-      <workItem from="1605627676762" duration="13854000" />
+      <workItem from="1605627676762" duration="14203000" />
     </task>
     <task id="LOCAL-00001" summary="Chess board visualized and functional">
       <created>1601918227332</created>
@@ -243,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605627977215</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Rook moves finished">
+      <created>1605644196811</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605644196811</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +268,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Chess board visualized and functional" />
     <MESSAGE value="Rook moves primitive prototypes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rook moves primitive prototypes" />
+    <MESSAGE value="Rook moves finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rook moves finished" />
   </component>
   <component name="WindowStateProjectService">
     <state x="115" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605555260504">
@@ -275,25 +280,25 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="330" y="13" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1601918226231" />
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom" timestamp="1605644052384">
+    <state width="1493" height="323" key="GridCell.Tab.0.bottom" timestamp="1605644155467">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605644052384" />
+    <state width="1493" height="323" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605644155467" />
     <state width="1557" height="143" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1602801630872" />
-    <state width="1493" height="212" key="GridCell.Tab.0.center" timestamp="1605644052384">
+    <state width="1493" height="323" key="GridCell.Tab.0.center" timestamp="1605644155467">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605644052384" />
+    <state width="1493" height="323" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605644155467" />
     <state width="1557" height="143" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1602801630872" />
-    <state width="1493" height="212" key="GridCell.Tab.0.left" timestamp="1605644052384">
+    <state width="1493" height="323" key="GridCell.Tab.0.left" timestamp="1605644155467">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605644052384" />
+    <state width="1493" height="323" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605644155467" />
     <state width="1557" height="143" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1602801630872" />
-    <state width="1493" height="212" key="GridCell.Tab.0.right" timestamp="1605644052384">
+    <state width="1493" height="323" key="GridCell.Tab.0.right" timestamp="1605644155467">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605644052384" />
+    <state width="1493" height="323" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605644155467" />
     <state width="1557" height="143" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1602801630872" />
     <state width="1557" height="143" key="GridCell.Tab.1.bottom" timestamp="1602801630527">
       <screen x="0" y="0" width="1600" height="860" />
@@ -316,10 +321,10 @@
     </state>
     <state x="101" y="64" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604432421751" />
     <state x="301" y="73" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1601949049607" />
-    <state x="376" y="157" key="Vcs.Push.Dialog.v2" timestamp="1605627990705">
+    <state x="376" y="157" key="Vcs.Push.Dialog.v2" timestamp="1605644202222">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="376" y="157" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605627990705" />
+    <state x="376" y="157" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605644202222" />
     <state x="392" y="164" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1601918242468" />
     <state x="496" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1602782737772">
       <screen x="0" y="0" width="1600" height="860" />
@@ -337,7 +342,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/A6$AlphaBetaPruning.coverage" NAME="AlphaBetaPruning Coverage Results" MODIFIED="1602800525559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/github_repo$AlphaBetaPruning.coverage" NAME="AlphaBetaPruning Coverage Results" MODIFIED="1605549224271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/github_repo$test_run.coverage" NAME="test_run Coverage Results" MODIFIED="1605644052381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/github_repo$test_run.coverage" NAME="test_run Coverage Results" MODIFIED="1605644155459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/github_repo$fun_tests.coverage" NAME="fun_tests Coverage Results" MODIFIED="1605639185086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/github_repo$Minimax.coverage" NAME="Minimax Coverage Results" MODIFIED="1605547233352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/A6$print_board_test.coverage" NAME="print_board_vels Coverage Results" MODIFIED="1601915848308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
