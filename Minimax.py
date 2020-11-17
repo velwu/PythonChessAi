@@ -3,7 +3,7 @@ import chess
 import math
 import random
 import sys
-import print_board_vels as pbv
+import print_board as pbv
 
 # Package required: https://pypi.org/project/python-chess/
 # pip install python-chess
@@ -125,7 +125,7 @@ def getPieceValue(piece):
 def main():
     board = chess.Board()
     n = 0
-    pbv.print_board(board)
+    pbv.print_board(board, False)
     while n < 100:
         if n%2 == 0:
             move = input("Enter move: ")
@@ -138,7 +138,7 @@ def main():
             move = minimaxRoot(4, board, True)
             move = chess.Move.from_uci(str(move))
             board.push(move)
-        pbv.print_board(board)
+        pbv.print_board(board, False)
         n += 1
 
 

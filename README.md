@@ -6,6 +6,9 @@ Movements in this chess game are input in the form of 4-digit strings, where the
 
 The game can be run at the development console in PyCharm. The human player plays as Black (bottom), and the computer plays as White (top).
 
+11/01/2020:
+Communication started on:
+https://gitter.im/python-chess/community
 
 ### Example game states before and after moves:
 ```

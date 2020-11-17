@@ -3,8 +3,9 @@ import chess
 import math
 import random
 import sys
-import print_board_vels as pbv
-
+import print_board as pbv
+import chess.svg
+from IPython.display import SVG
 
 
 def minimaxRoot(depth, board,isMaximizing):
@@ -12,7 +13,7 @@ def minimaxRoot(depth, board,isMaximizing):
     bestMove = -9999
     bestMoveFinal = None
 
-    print("Depth: ", (4 - depth + 1), " ", len(list(possibleMoves)), " Possible Moves")
+    # print("Depth: ", (4 - depth + 1), " ", len(list(possibleMoves)), " Possible Moves")
 
     for x in possibleMoves:
         move = chess.Move.from_uci(str(x))
@@ -34,7 +35,7 @@ def minimax(depth, board, alpha, beta, is_maximizing):
         return -evaluation(board)
     possibleMoves = board.legal_moves
 
-    print("Depth: ", (4 - depth + 1), " ", len(list(possibleMoves)), " Possible Moves")
+    # print("Depth: ", (4 - depth + 1), " ", len(list(possibleMoves)), " Possible Moves")
 
     if(is_maximizing):
         bestMove = -9999
@@ -119,7 +120,7 @@ def main():
     board = chess.Board()
     n = 0
     # print(board)
-    pbv.print_board(board)
+    pbv.print_board(board, False)
     while n < 100:
         if n%2 == 0:
             move = input("Enter move: ")
@@ -131,7 +132,7 @@ def main():
             move = chess.Move.from_uci(str(move))
             board.push(move)
         # print(board)
-        pbv.print_board(board)
+        pbv.print_board(board, False)
         n += 1
 
 
